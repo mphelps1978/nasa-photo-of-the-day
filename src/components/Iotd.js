@@ -5,14 +5,14 @@ import "../App.css";
 import Axios from "axios";
 
 export default function Iotd() {
-  const [iotd, setIodt] = useState([]);
+  const [iotd, setIodt] = useState(Object);
 
   useEffect(() => {
     Axios.get(
       "https://api.nasa.gov/planetary/apod?api_key=YXLRymXrded1Mm7xdzPA27oNNlk30JdaApwhVOoP",
     )
       .then(response => {
-        console.log("response: ", response);
+        console.log("response: ", response.data);
         setIodt(response.data);
       })
       .catch(error => {
@@ -20,22 +20,15 @@ export default function Iotd() {
       });
   }, []);
 
-  // Display a loading message while the data is fetching
-
-  // Display your component as normal after the data has been fetched
   return (
     <div className="container">
-      {/* {iotd.map((iotd, index) => {
-        return (
-          <IotdCard
-            key={index}
-            title={title}
-            date={date}
-            hdurl={hdurl}
-            explanation={explanation}
-          />
-        );
-      })} */}
+      <IotdCard
+        key={iotd.index}
+        title={iotd.title}
+        date={iotd.date}
+        hdurl={iotd.hdurl}
+        explanation={iotd.explanation}
+      />
     </div>
   );
 }
