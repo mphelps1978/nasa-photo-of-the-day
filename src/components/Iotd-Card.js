@@ -1,17 +1,9 @@
 import React from "react";
-import Iotd from "./Iotd";
 import styled from "styled-components";
-import {
-  Card,
-  CardImg,
-  CardTitle,
-  CardBody,
-  CardSubtitle,
-  Button,
-} from "reactstrap";
+import { Card, CardImg, CardTitle, CardSubtitle, Button } from "reactstrap";
 
 const CardWrapper = styled.div`
-  margin-left: 32.5%;
+  margin-left: 30%;
   padding-top: 20px;
   ${"" /* margin-bottom: 100%; */}
 `;
