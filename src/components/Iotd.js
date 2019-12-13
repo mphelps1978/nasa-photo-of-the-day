@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import IotdCard from "./Iotd-Card";
 
-import "../App.css";
 import Axios from "axios";
 
 export default function Iotd() {
@@ -21,14 +20,14 @@ export default function Iotd() {
   }, []);
 
   return (
-    <div className="container">
-      <IotdCard
-        key={iotd.index}
-        title={iotd.title}
-        date={iotd.date}
-        hdurl={iotd.hdurl}
-        explanation={iotd.explanation}
-      />
-    </div>
+    <IotdCard
+      key={iotd.index}
+      title={iotd.title}
+      credit={iotd.copyright}
+      date={iotd.date}
+      url={iotd.url}
+      explanation={iotd.explanation}
+      hdurl={iotd.hdurl}
+    />
   );
 }
