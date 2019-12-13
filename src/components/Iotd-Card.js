@@ -23,7 +23,7 @@ const TitleWrapper = styled.h2`
 `;
 const IotdCard = props => {
   console.log(props);
-  if (!props.url) return <h3>Loading...</h3>;
+  if (!props.url) return <h3 style={{ color: "white" }}>Loading...</h3>;
   return (
     <CardWrapper>
       <Card style={{ textalign: "center", maxWidth: "800px" }}>
