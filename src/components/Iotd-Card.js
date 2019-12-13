@@ -11,7 +11,7 @@ import {
 } from "reactstrap";
 
 const CardWrapper = styled.div`
-  margin-left: 800px;
+  margin-left: 32.5%;
   padding-top: 20px;
   ${"" /* margin-bottom: 100%; */}
 `;
